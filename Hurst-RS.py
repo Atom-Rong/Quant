@@ -8,13 +8,8 @@ import numpy as np
 data=pd.read_excel(r'D:\atom\hurst\hurst.exe\data\shangzheng.xlsx')
 data=np.array(data)
 time_length=len(data[:,0])+1
-date_list = pd.date_range(data[0,0], periods=time_length, freq='D')
 ranges = ['1','2','4','8','16','32']
 gap=[0 for i in range(len(ranges))]
-sumnumber=0
-for j  in range(len(ranges)):
-    j=int(j)
-    sumnumber=int(ranges[j])+sumnumber
 ARS=[]
 for i in range(len(ranges)):
     if i==0:
